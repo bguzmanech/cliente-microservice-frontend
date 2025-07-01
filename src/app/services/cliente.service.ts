@@ -9,8 +9,8 @@ import { environmentProd } from 'src/environments/environment.prod';
   providedIn: 'root'
 })
 export class ClienteService {
-  private apiUrl = environmentProd.apiUrl;
-
+  private apiUrl = environment.production ? 
+  environment.apiUrl : 'http://localhost:8080/api';
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
