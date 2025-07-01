@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: ''
+    apiUrl: 'http://microservice-backend.us-east-2.elasticbeanstalk.com/api'
   };
