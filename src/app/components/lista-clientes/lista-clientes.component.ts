@@ -108,7 +108,6 @@ export class ListaClientesComponent implements OnInit {
     });
   }
 
-  // Helper methods para el template
   formatearFecha(fecha: string): string {
     return new Date(fecha).toLocaleDateString('es-ES', {
       day: '2-digit',
