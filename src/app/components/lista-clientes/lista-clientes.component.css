@@ -1,0 +1,338 @@
+/* Estilos específicos para lista-clientes component */
+
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .table-dark th {
+    background: linear-gradient(135deg, #343a40 0%, #495057 100%);
+    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .sortable {
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+  }
+  
+  .sortable:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+  }
+  
+  .table-row {
+    transition: all 0.3s ease;
+  }
+  
+  .table-row:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+    transform: translateX(5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .badge {
+    font-size: 0.85rem;
+    padding: 0.5em 0.75em;
+    border-radius: 20px;
+  }
+  
+  .input-group {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  .input-group-text {
+    background-color: #f8f9fa;
+    border: none;
+    color: #6c757d;
+  }
+  
+  .form-control {
+    border: none;
+    padding: 12px 16px;
+  }
+  
+  .form-control:focus {
+    box-shadow: none;
+    border-color: transparent;
+  }
+  
+  /* Animaciones para los badges */
+  .badge {
+    animation: slideInRight 0.3s ease;
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Estados de colores especiales */
+  .bg-orange {
+    background-color: #fd7e14 !important;
+  }
+  
+  .text-orange {
+    color: #fd7e14 !important;
+  }
+  
+  /* Efectos hover para botones */
+  .btn {
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Iconos con animaciones */
+  .fa-sync-alt {
+    transition: transform 0.3s ease;
+  }
+  
+  .btn:hover .fa-sync-alt {
+    transform: rotate(180deg);
+  }
+  
+  .fa-sort-up, .fa-sort-down {
+    animation: sortBounce 0.3s ease;
+  }
+  
+  @keyframes sortBounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 992px) {
+    .table-responsive {
+      font-size: 0.875rem;
+    }
+    
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.375em 0.5em;
+    }
+    
+    .d-flex.gap-2 {
+      flex-direction: column;
+      gap: 0.5rem !important;
+    }
+    
+    .btn {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .table th, .table td {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+    }
+    
+    .table th i {
+      display: none;
+    }
+    
+    .d-flex.justify-content-between {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .input-group {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  /* Estados especiales para filas */
+  .table-warning {
+    background-color: rgba(255, 193, 7, 0.1) !important;
+    border-left: 4px solid #ffc107;
+  }
+  
+  /* Loading states */
+  .spinner-border {
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Efectos para cards */
+  .card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+  }
+  
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* Estilos para el badge de conteo */
+  .badge.bg-primary.fs-6 {
+    padding: 0.75em 1em;
+    border-radius: 25px;
+    font-weight: 500;
+  }
+  
+  /* Mejoras para accessibility */
+  .sortable:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+  }
+  
+  .btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .table-hover tbody tr:hover {
+      background-color: rgba(255, 255, 255, 0.075);
+    }
+    
+    .input-group-text {
+      background-color: #343a40;
+      color: #adb5bd;
+    }
+    
+    .form-control {
+      background-color: #495057;
+      border-color: #6c757d;
+      color: #fff;
+    }
+  }
+  
+  /* Animación de entrada para la tabla */
+  .fade-in {
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Efectos especiales para exportar */
+  .btn-outline-success:hover {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+  }
+
+  /* Agregar a lista-clientes.component.css */
+
+/* Header de tabla con azul marino */
+.table-dark,
+.table-dark th {
+  background: #001568 !important;
+  background-color: #001568 !important;
+  color: #FFFFFF !important;
+  border-color: #001568 !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 10px rgba(0, 21, 104, 0.2);
+}
+
+.table-dark th i {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.table-dark th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.table-dark th.sortable:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transform: translateY(-1px);
+}
+
+.table-dark th.sortable:active {
+  transform: translateY(0);
+}
+
+/* Iconos de ordenamiento en header azul */
+.table-dark .fa-sort,
+.table-dark .fa-sort-up,
+.table-dark .fa-sort-down {
+  color: rgba(255, 255, 255, 0.7) !important;
+  transition: all 0.3s ease;
+}
+
+.table-dark .fa-sort-up.text-primary,
+.table-dark .fa-sort-down.text-primary {
+  color: #FFFFFF !important;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+}
+
+/* Mejorar el contraste de los badges en la tabla */
+.badge.bg-info {
+  background-color: #17a2b8 !important;
+  color: #FFFFFF !important;
+}
+
+.badge.bg-success {
+  background-color: #28a745 !important;
+  color: #FFFFFF !important;
+}
+
+.badge.bg-warning {
+  background-color: #ffc107 !important;
+  color: #000000 !important;
+}
+
+.badge.bg-danger {
+  background-color: #dc3545 !important;
+  color: #FFFFFF !important;
+}
+
+/* Efecto hover para las filas del cuerpo de la tabla */
+.table-row:hover {
+  background-color: rgba(0, 21, 104, 0.05) !important;
+  transform: translateX(3px);
+  box-shadow: 0 2px 8px rgba(0, 21, 104, 0.1);
+}
+
+/* Mejorar la card que contiene la tabla */
+.table-responsive {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 21, 104, 0.15);
+}
+
+/* Asegurar que la primera fila del header tenga el estilo correcto */
+thead.table-dark tr:first-child th {
+  border-top: none;
+  background: #001568 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .table-dark th {
+    font-size: 0.85rem;
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .table-dark th i {
+    font-size: 0.8rem;
+  }
+}

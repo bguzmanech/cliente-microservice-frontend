@@ -1,0 +1,56 @@
+<div class="container mt-4 fade-in">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="text-primary">
+            <i class="fas fa-chart-bar me-2"></i>
+            Estadísticas de Clientes
+          </h2>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="isLoading && !kpis" class="text-center py-5">
+      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;"></div>
+      <p class="mt-3 text-muted">Cargando estadísticas...</p>
+    </div>
+  
+    <div *ngIf="error" class="alert alert-danger">
+      <i class="fas fa-exclamation-triangle me-2"></i>
+      {{ error }}
+      <button class="btn btn-sm btn-outline-danger ms-3" (click)="actualizarEstadisticas()">
+        Reintentar
+      </button>
+    </div>
+  
+    <div *ngIf="!isLoading && !error && kpis" class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card kpi-card h-100">
+          <div class="card-body text-center">
+            <div class="mb-3">
+              <i class="fas fa-users fa-3x"></i>
+            </div>
+            <h5 class="card-title">Promedio de Edad</h5>
+            <h2 class="display-4 mb-0">
+              {{ promedioFormateado }}
+              <small class="text-muted fs-6">años</small>
+            </h2>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-6 mb-4">
+        <div class="card kpi-card h-100">
+          <div class="card-body text-center">
+            <div class="mb-3">
+              <i class="fas fa-chart-line fa-3x"></i>
+            </div>
+            <h5 class="card-title">Desviación Estándar</h5>
+            <h2 class="display-4 mb-0">
+              {{ desviacionFormateada }}
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>

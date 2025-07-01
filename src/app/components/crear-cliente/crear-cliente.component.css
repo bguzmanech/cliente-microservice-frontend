@@ -1,0 +1,40 @@
+/* Headers de cards con el azul marino de PinApp */
+.card-header.bg-primary,
+.card-header {
+  background: #001568 !important;
+  color: #FFFFFF !important;
+  border: none;
+  border-radius: 10px 10px 0 0 !important;
+  box-shadow: 0 2px 10px rgba(0, 21, 104, 0.2);
+}
+
+.card-header h4,
+.card-header h5,
+.card-header h6 {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card-header i {
+  color: #FFFFFF !important;
+  opacity: 0.95;
+}
+
+/* Botones que usan el color primario también con el azul marino */
+.btn-primary {
+  background: #001568 !important;
+  border-color: #001568 !important;
+}
+
+.btn-primary:hover {
+  background: #002080 !important;
+  border-color: #002080 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 21, 104, 0.3);
+}
+
+.btn-primary:focus {
+  background: #001568 !important;
+  border-color: #001568 !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 21, 104, 0.25);
+}
