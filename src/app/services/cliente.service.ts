@@ -3,12 +3,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { ClienteRequest, ClienteResponse, KpiClientes } from '../models/cliente.models';
+import { environmentProd } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClienteService {
-  private apiUrl = environment.apiUrl;
+  private apiUrl = environmentProd.apiUrl;
 
   private httpOptions = {
     headers: new HttpHeaders({
