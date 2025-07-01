@@ -8,7 +8,8 @@ import { ClienteRequest, ClienteResponse, KpiClientes } from '../models/cliente.
   providedIn: 'root'
 })
 export class ClienteService {
-  private apiUrl = environment.production
+  private apiUrl = environment.apiUrl;
+
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
